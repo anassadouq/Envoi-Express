@@ -11,21 +11,29 @@
 
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <div class="logo-icon">EE</div>
                 Envoi Express
             </a>
             <ul class="nav-links">
-                <li><a href="#comment-ca-marche">Comment ça marche</a></li>
-                <li><a href="#tarifs">Tarifs</a></li>
-                <li><a href="#support">Support</a></li>
-                <li><a href="#connexion">Connexion</a></li>
+                <li><a href="/">Acceuil</a></li>
+                <li><a href="#pourquoi">Pourquoi nous</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#procedure">Procedure</a></li>
+                <li><a href="#contactez-nous">Contactez-nous</a></li>
             </ul>
         </nav>
     </header>
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
     <!-- Hero Section -->
     <section class="hero">
@@ -52,53 +60,8 @@
         </div>
     </section>
 
-
-    <!-- Form Section -->
-    <section class="form-section">
-        <div class="form-container">
-            <div class="form-card">
-                <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
-                <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
-                
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="nom">Nom et Prénom</label>
-                        <input type="text" id="nom" placeholder="Mohamed Alami">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="mohamed.alami@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="telephone">Téléphone</label>
-                        <input type="tel" id="telephone" placeholder="+212 6 12 34 56 78">
-                    </div>
-                    <div class="form-group">
-                        <label for="ville-depart">Ville de départ</label>
-                        <input type="text" id="ville-depart" placeholder="Casablanca">
-                    </div>
-                    <div class="form-group">
-                        <label for="ville-arrivee">Ville d'arrivée</label>
-                        <input type="text" id="ville-arrivee" placeholder="Rabat">
-                    </div>
-                    <div class="form-group">
-                        <label for="poids">Poids approximatif</label>
-                        <input type="text" id="poids" placeholder="5 kg">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="details">Détails de l'envoi</label>
-                        <textarea id="details" rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical; font-family: inherit;" placeholder="Décrivez votre colis (dimensions, nature de l'objet, instructions spéciales, etc.)"></textarea>
-                    </div>
-                    <div class="form-group full-width" style="text-align: center;">
-                        <button class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">Envoyer la demande</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section class="features">
+    <section class="features" id="pourquoi">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Pourquoi choisir Envoi Express ?</h2>
             <div class="features-grid">
@@ -179,7 +142,7 @@
     </section>
 
     <!-- Packaging Section -->
-    <section class="packaging">
+    <section class="packaging" id="service">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Emballage de Qualité Professionnelle</h2>
             <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -255,7 +218,7 @@
                 <h3 style="color: #2E4BC6; margin-bottom: 1rem;"><i class="fas fa-bullseye"></i> Pourquoi choisir notre service d'emballage ?</h3>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                     <div>
-                        <strong style="color: #333;"><i class="fas fa-check-circle"></i> 99.9%</strong><br>
+                        <strong style="color: #333;"><i class="fas fa-check-circle"></i> 99.8%</strong><br>
                         <span style="color: #666;">de colis livrés intacts</span>
                     </div>
                     <div>
@@ -279,7 +242,7 @@
 
 
     <!-- Workflow Section -->
-    <section class="workflow">
+    <section class="workflow" id="procedure">
         <div class="workflow-container">
             <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Suivi de votre colis</h2>
             <p style="text-align: center; color: #666; margin-bottom: 4rem; font-size: 1.1rem;">
@@ -369,154 +332,111 @@
         </div>
     </section>
 
+        <!-- Form Section -->
+        <section class="form-section" >
+            <div class="form-container">
+                <div class="form-card" id="contactez-nous">
+                    <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
+                    <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
+                    
+                    <form method="POST" action="{{ route('contact.store') }}">
+                        @csrf
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nom">Nom et Prénom</label>
+                                <input type="text" name="nom" placeholder="Mohamed Alami">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" placeholder="mohamed.alami@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" name="tel" placeholder="+212 6 12 34 56 78">
+                            </div>
+                            <div class="form-group">
+                                <label for="ville-depart">Ville de départ</label>
+                                <input type="text" name="ville_depart" placeholder="Casablanca">
+                            </div>
+                            <div class="form-group">
+                                <label for="ville-arrivee">Ville d'arrivée</label>
+                                <input type="text" name="ville_arrivee" placeholder="Rabat">
+                            </div>
+                            <div class="form-group">
+                                <label for="poids">Poids approximatif</label>
+                                <input type="text" name="poids" placeholder="5 kg">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="details">Détails de l'envoi</label>
+                                <textarea name="detail" rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical; font-family: inherit;" placeholder="Décrivez votre colis (dimensions, nature de l'objet, instructions spéciales, etc.)"></textarea>
+                            </div>
+                            <div class="form-group full-width" style="text-align: center;">
+                                <button class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">Envoyer la demande</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Envoi Express</h3>
+                    <div class="footer-logo">
+                        <a href="/" class="logo">
+                            <div class="logo-icon">EE</div>
+                            Envoi Express
+                        </a>
+                    </div>
+                    <p><br>Simple et moins cher. <br>La livraison qu'il vous faut.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h5>Services</h5>
                     <ul>
-                        <li><a href="#">À propos</a></li>
-                        <li><a href="#">Comment ça marche</a></li>
-                        <li><a href="#">Tarifs</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#service">Sécurité Maximale</a></li>
+                        <li><a href="#service">Service Rapide</a></li>
+                        <li><a href="#service">Sur Mesure</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Services</h3>
+                    <h5>Informations</h5>
                     <ul>
-                        <li><a href="#">Envoyer un colis</a></li>
-                        <li><a href="#">Devenir transporteur</a></li>
-                        <li><a href="#">Assurance</a></li>
-                        <li><a href="#">Professionnels</a></li>
+                        <li><a href="/">Acceuil</a></li>
+                        <li><a href="#pourquoi">Pourquoi nous</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#procedure">Procedure</a></li>
+                        <li><a href="#contactez-nous">Contact</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Centre d'aide</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Signaler un problème</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Légal</h3>
-                    <ul>
-                        <li><a href="#">Conditions générales</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Cookies</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Notre Adresse</h3>
-                    <div style="color: #ccc; line-height: 1.6;">
-                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                            <span style="margin-right: 0.5rem;">📍</span>
-                            <span>123 Avenue Mohammed V<br>Casablanca 20250, Maroc</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                            <span style="margin-right: 0.5rem;">📞</span>
-                            <span>+212 5 22 12 34 56</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                            <span style="margin-right: 0.5rem;">✉️</span>
-                            <span>contact@envoiexpress.ma</span>
-                        </div>
-                        
-                        <!-- Map -->
-                        <div style="background: #444; border-radius: 10px; overflow: hidden; height: 150px; position: relative;">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4567!2d-7.6175!3d33.5731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1635959823456!5m2!1sen!2sus"
-                                width="100%" 
-                                height="150" 
-                                style="border:0; border-radius: 10px;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+                    <h5>Contact</h5>
+                    <div class="contact-details">
+                        <ul>
+                            <li>
+                                <span class="contact-icon"><i class="fas fa-phone"></i> +212 5 22 12 34 56</span>
+                            </li>
+                            <li>
+                                <span class="contact-icon"><i class="fas fa-envelope"></i> contact@envoiexpress.ma</span>
+                            </li>
+                            <li>
+                                <span class="contact-icon"><i class="fas fa-map-marker-alt"></i> Avenue Mohammed V<br>Casablanca 20250, Maroc</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Envoi Express. Tous droits réservés.</p>
+                <p>&copy; 2025 <a href="/">Envoi Express</a>. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Simplified animations and interactions
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Form submission
-        document.querySelector('.form-section button').addEventListener('click', function(e) {
-            e.preventDefault();
-            const nom = document.getElementById('nom').value;
-            const email = document.getElementById('email').value;
-            const telephone = document.getElementById('telephone').value;
-            const villeDepart = document.getElementById('ville-depart').value;
-            const villeArrivee = document.getElementById('ville-arrivee').value;
-            const details = document.getElementById('details').value;
-            
-            if (nom && email && telephone && villeDepart && villeArrivee && details) {
-                alert(`Merci ${nom} ! Votre demande de ${villeDepart} vers ${villeArrivee} a été envoyée. Nous vous contactons bientôt au ${telephone}.`);
-                // Reset form
-                document.getElementById('nom').value = '';
-                document.getElementById('email').value = '';
-                document.getElementById('telephone').value = '';
-                document.getElementById('ville-depart').value = '';
-                document.getElementById('ville-arrivee').value = '';
-                document.getElementById('details').value = '';
-                document.getElementById('poids').value = '';
-            } else {
-                alert('Veuillez remplir tous les champs du formulaire');
-            }
-        });
-
-        // Simple hover effects for cards
-        document.querySelectorAll('.feature-card, .packaging-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-                this.style.boxShadow = '0 15px 40px rgba(0,0,0,0.15)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
-            });
-        });
-    </script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
