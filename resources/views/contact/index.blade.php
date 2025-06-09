@@ -49,14 +49,14 @@
                     <tbody>
                         @foreach ($contacts as $contact)
                             <tr>
-                                <td>{{ $contact->prenom }} {{ $contact->nom }}</td>
-                                <td>{{ $contact->email }}</td>
-                                <td>{{ $contact->tel }}</td>
-                                <td>{{ $contact->ville_depart }}</td>
-                                <td>{{ $contact->ville_arrivee }}</td>
-                                <td>{{ $contact->poids }}</td>
-                                <td>{{ $contact->detail }}</td>
-                                <td>
+                                <td style="width: 10%">{{ $contact->prenom }} {{ $contact->nom }}</td>
+                                <td style="width: 10%">{{ $contact->email }}</td>
+                                <td style="width: 5%">{{ $contact->tel }}</td>
+                                <td style="width: 8%">{{ $contact->ville_depart }}</td>
+                                <td style="width: 8%">{{ $contact->ville_arrivee }}</td>
+                                <td style="width: 5%">{{ $contact->poids }} Kg</td>
+                                <td style="width: 20%">{{ $contact->detail }}</td>
+                                <td style="width: 5%">
                                     <form action="{{ route('contact.destroy', $contact->id) }}" method="POST" id="deleteForm{{ $contact->id }}">
                                         @csrf
                                         @method('DELETE')

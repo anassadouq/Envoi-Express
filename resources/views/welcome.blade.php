@@ -19,7 +19,15 @@
                 <div class="logo-icon">EE</div>
                 Envoi Express
             </a>
-            <ul class="nav-links">
+
+            <!-- Burger Icon -->
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">Acceuil</a></li>
                 <li><a href="#pourquoi">Pourquoi nous</a></li>
                 <li><a href="#service">Service</a></li>
@@ -28,6 +36,7 @@
             </ul>
         </nav>
     </header>
+
 
     @if (session('success'))
         <div class="alert alert-success">
@@ -124,11 +133,11 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                    <div class="review-text">"Au top ! Première expérience sur ce site. Besoin d'un transport d'un gros meuble situé à 800km de chez moi. Vite contacté, transporteur au top, transaction sécurisée… Je recommande ce site sans problème."</div>
+                    <div class="review-text">"Au top ! Première expérience sur ce site. Besoin d'un transport d'un gros meuble situé à 800km de chez moi. Vite contacté, transporteur au top, transaction sécurisée. Je recommande ce site sans problème."</div>
                     <div class="review-author">- Alexandra</div>
                 </div>
                 <div class="review-card">
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="review-rating">⭐⭐⭐⭐</div>
                     <div class="review-text">"Prix imbattable ! Super service à un prix imbattable. Les avis laissés aux conducteurs permettent d'avoir une totale confiance, et à raison. Je recommande Envoi Express à fond !"</div>
                     <div class="review-author">- Caroline M.</div>
                 </div>
@@ -317,7 +326,7 @@
                     <div class="stat-label">kg de CO2 évité !</div>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number floating">99.99%</span>
+                    <span class="stat-number floating">99.8%</span>
                     <div class="stat-label">de colis livrés sans pépin</div>
                 </div>
                 <div class="stat-item">
@@ -344,27 +353,27 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="nom">Nom et Prénom</label>
-                                <input type="text" name="nom" placeholder="Mohamed Alami">
+                                <input type="text" name="nom" placeholder="Mohamed Alami" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="mohamed.alami@email.com">
+                                <input type="email" name="email" placeholder="mohamed.alami@email.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="telephone">Téléphone</label>
-                                <input type="tel" name="tel" placeholder="+212 6 12 34 56 78">
+                                <input type="tel" name="tel" placeholder="+212 6 12 34 56 78" required>
                             </div>
                             <div class="form-group">
                                 <label for="ville-depart">Ville de départ</label>
-                                <input type="text" name="ville_depart" placeholder="Casablanca">
+                                <input type="text" name="ville_depart" placeholder="Casablanca" required>
                             </div>
                             <div class="form-group">
                                 <label for="ville-arrivee">Ville d'arrivée</label>
-                                <input type="text" name="ville_arrivee" placeholder="Rabat">
+                                <input type="text" name="ville_arrivee" placeholder="Rabat" required>
                             </div>
                             <div class="form-group">
                                 <label for="poids">Poids approximatif</label>
-                                <input type="text" name="poids" placeholder="5 kg">
+                                <input type="text" name="poids" placeholder="5 kg" required>
                             </div>
                             <div class="form-group full-width">
                                 <label for="details">Détails de l'envoi</label>

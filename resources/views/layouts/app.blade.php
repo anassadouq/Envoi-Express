@@ -8,7 +8,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- SVG -->
-        <title>Envoie Express</title>
+        <title>Envoi Express</title>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -30,23 +30,6 @@
             z-index: 100;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #2E4BC6;
-            text-decoration: none;
-        }
-
         .logo-icon {
             width: 40px;
             height: 40px;
@@ -59,14 +42,20 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2E4BC6 !important;
+        }
     </style>
-    
+
     <body>
         <div id="app">
             <nav class="header">
                 <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                        <a href="/" class="logo">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
                             <div class="logo-icon">EE</div>
                             Envoi Express
                         </a>
@@ -77,12 +66,12 @@
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link my-2" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="width: 100px; color:red">
-                                        <span class="material-symbols-outlined" style="">logout</span> Logout
+                                    <a class="nav-link my-2 d-flex align-items-center gap-1 text-danger"
+                                    href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <span class="material-symbols-outlined">logout</span> Logout
                                     </a>
                                 </li>
                             </ul>
@@ -94,6 +83,7 @@
                     </nav>
                 </div>
             </nav>
+
 
             <main class="py-4">
                 @yield('content')
