@@ -3,22 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
         <!-- SVG -->
         <title>Envoi Express</title>
-
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
-
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Google Material Icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
     </head>
 
     <style>

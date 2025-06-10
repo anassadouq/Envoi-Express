@@ -11,5 +11,3 @@ Route::get('/admin', [ContactController::class, 'index'])->middleware('auth')->n
 Route::resource('/contact', ContactController::class)->except(['index']);
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

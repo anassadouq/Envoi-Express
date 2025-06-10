@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
@@ -244,7 +242,7 @@
                     </div>
                 </div>
                 <p style="color: #666; margin-bottom: 1.5rem; font-style: italic;">"Votre colis, notre priorité. Chaque emballage est réalisé avec le plus grand soin par nos experts."</p>
-                <a href="#" class="cta-button">Demander un devis d'emballage</a>
+                <a href="#contactez-nous" class="cta-button">Demander un devis d'emballage</a>
             </div>
         </div>
     </section>
@@ -341,52 +339,52 @@
         </div>
     </section>
 
-        <!-- Form Section -->
-        <section class="form-section" >
-            <div class="form-container">
-                <div class="form-card" id="contactez-nous">
-                    <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
-                    <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
+    <!-- Form Section -->
+    <section class="form-section" >
+        <div class="form-container">
+            <div class="form-card" id="contactez-nous">
+                <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
                     
-                    <form method="POST" action="{{ route('contact.store') }}">
-                        @csrf
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="nom">Nom et Prénom</label>
-                                <input type="text" name="nom" placeholder="Mohamed Alami" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="mohamed.alami@email.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone">Téléphone</label>
-                                <input type="tel" name="tel" placeholder="+212 6 12 34 56 78" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="ville-depart">Ville de départ</label>
-                                <input type="text" name="ville_depart" placeholder="Casablanca" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="ville-arrivee">Ville d'arrivée</label>
-                                <input type="text" name="ville_arrivee" placeholder="Rabat" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="poids">Poids approximatif</label>
-                                <input type="text" name="poids" placeholder="5 kg" required>
-                            </div>
-                            <div class="form-group full-width">
-                                <label for="details">Détails de l'envoi</label>
-                                <textarea name="detail" rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical; font-family: inherit;" placeholder="Décrivez votre colis (dimensions, nature de l'objet, instructions spéciales, etc.)"></textarea>
-                            </div>
-                            <div class="form-group full-width" style="text-align: center;">
-                                <button class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">Envoyer la demande</button>
-                            </div>
+                <form method="POST" action="{{ route('contact.store') }}">
+                    @csrf
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nom">Nom et Prénom</label>
+                            <input type="text" name="nom" placeholder="Mohamed Alami" required>
                         </div>
-                    </form>
-                </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="mohamed.alami@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" name="tel" placeholder="+212 6 12 34 56 78" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville-depart">Ville de départ</label>
+                            <input type="text" name="ville_depart" placeholder="Casablanca" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville-arrivee">Ville d'arrivée</label>
+                            <input type="text" name="ville_arrivee" placeholder="Rabat" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="poids">Poids approximatif</label>
+                            <input type="text" name="poids" placeholder="5 kg" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="details">Détails de l'envoi</label>
+                            <textarea name="detail" rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical; font-family: inherit;" placeholder="Décrivez votre colis (dimensions, nature de l'objet, instructions spéciales, etc.)"></textarea>
+                        </div>
+                        <div class="form-group full-width" style="text-align: center;">
+                            <button class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">Envoyer la demande</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
