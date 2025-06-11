@@ -41,6 +41,7 @@
                             <th>Ville d'arrivée</th>
                             <th>Poids</th>
                             <th>Detail</th>
+                            <th>Date</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -54,6 +55,7 @@
                                 <td style="width: 8%">{{ $contact->ville_arrivee }}</td>
                                 <td style="width: 5%">{{ $contact->poids }} Kg</td>
                                 <td style="width: 20%">{{ $contact->detail }}</td>
+                                <td>{{ \Carbon\Carbon::parse($contact->created_at)->format('d/m/Y \à H:i') }}</td>
                                 <td style="width: 5%">
                                     <form action="{{ route('contact.destroy', $contact->id) }}" method="POST" id="deleteForm{{ $contact->id }}">
                                         @csrf
