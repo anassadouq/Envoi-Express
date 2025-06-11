@@ -61,9 +61,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <a href="/" class="logo">
-                            <div class="logo-icon">EE</div>
-                            Envoi Express
+                        <a href="/">
+                            <img src="images/logo.png" alt="" width="70px">
                         </a>
                     </div>
                     <p><br>Simple et moins cher. <br>La livraison qu'il vous faut.</p>

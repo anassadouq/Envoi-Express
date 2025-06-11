@@ -536,7 +536,7 @@
                         <div class="cta-content">
                             <h2>Rejoignez la révolution du transport</h2>
                             <p>Découvrez comment Envoi Express peut simplifier vos envois tout en contribuant à un avenir plus durable.</p>
-                            <a href="#" class="cta-button">Commencer maintenant</a>
+                            <a href="/" class="cta-button">Commencer maintenant</a>
                         </div>
                     </div>
                 </section>

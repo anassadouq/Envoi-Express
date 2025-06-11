@@ -122,9 +122,8 @@
 
         <header>
             <nav class="container">
-                <a href="/" class="logo">
-                    <div class="logo-icon">EE</div>
-                    Envoi Express
+                <a href="/">
+                    <img src="images/logo.png" alt="" width="60px">
                 </a>
 
                 <!-- Burger Icon -->
