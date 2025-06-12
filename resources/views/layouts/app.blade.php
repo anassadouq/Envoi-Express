@@ -64,20 +64,45 @@
                 color: #2E4BC6;
             }
 
-            .cta-button {
-                background: linear-gradient(135deg, #2E4BC6, #4A6CF7);
-                color: white;
-                padding: 12px 24px;
-                border: none;
-                border-radius: 25px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: transform 0.3s, box-shadow 0.3s;
+            /* Dropdown Menu */
+            .dropdown {
+                position: relative;
             }
 
-            .cta-button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 8px 25px rgba(46, 75, 198, 0.3);
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 200px;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+                z-index: 1000;
+                border-radius: 10px;
+                padding: 0.5rem 0;
+                top: 100%;
+                left: 0;
+            }
+
+            .dropdown-content a {
+                color: #333;
+                padding: 8px 16px;
+                text-decoration: none;
+                display: block;
+                font-size: 0.9rem;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+                color: #2E4BC6;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown > a::after {
+                content: " ▼";
+                font-size: 0.7rem;
+                margin-left: 0.5rem;
             }
 
             /* Burger styles */
@@ -135,13 +160,22 @@
 
                 <ul class="nav-links" id="nav-links">
                     <li><a href="/qui_sommes_nous">Qui sommes-nous ?</a></li>
-                    <li><a href="/">Déménagement</a></li>
+                    <li class="dropdown">
+                        <a href="#demenagement">Déménagement</a>
+                        <div class="dropdown-content">
+                            <a href="/demenagement_particulier">Déménagement Particulier</a>
+                            <a href="/demenagement_entreprise">Déménagement Entreprise</a>
+                            <a href="/demenagement_etudiant">Déménagement Étudiant</a>
+                        </div>
+                    </li>                    
                     <li><a href="#pourquoi">Pourquoi nous</a></li>
-                    <li><a href="/comment_ca_mache">Comment ça marche</a></li>
+                    <li><a href="/comment_ca_marche">Comment ça marche</a></li>
                     <li><a href="/nous_contacter">Nous contacter</a></li>
                 </ul>
             </nav>
         </header>
+
+        <script src="{{ asset('js/script.js') }}"></script>
 
         @yield('content')
         @include('layouts.footer')
