@@ -266,34 +266,35 @@
         <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.print.min.js"></script>
 
         <!-- DataTables Init -->
-        <script>
-            $(document).ready(function() {
-                $('#myTable').DataTable({
-                    dom: 'Blfrtip',
-                    lengthChange: false,
-                    paging: false,
-                    buttons: [
-                        {
-                            extend: 'collection',
-                            text: 'Export',
-                            buttons: [
-                                {
-                                    extend: 'excelHtml5',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
-                                },
-                                {
-                                    extend: 'pdfHtml5',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
-                                },
-                                {
-                                    extend: 'print',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
-                                }
-                            ]
-                        }
-                    ]
+            <script>
+                $(document).ready(function() {
+                    $('#myTable').DataTable({
+                        dom: 'Blfrtip',
+                        lengthChange: false,
+                        paging: false,
+                        ordering: false,
+                        buttons: [
+                            {
+                                extend: 'collection',
+                                text: 'Export',
+                                buttons: [
+                                    {
+                                        extend: 'excelHtml5',
+                                        exportOptions: { columns: [0,1,2,3,4,5] }
+                                    },
+                                    {
+                                        extend: 'pdfHtml5',
+                                        exportOptions: { columns: [0,1,2,3,4,5] }
+                                    },
+                                    {
+                                        extend: 'print',
+                                        exportOptions: { columns: [0,1,2,3,4,5] }
+                                    }
+                                ]
+                            }
+                        ]
+                    });
                 });
-            });
-        </script>
+            </script>
     </body>
 </html>

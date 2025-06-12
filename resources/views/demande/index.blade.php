@@ -275,6 +275,7 @@
                     dom: 'Blfrtip',
                     lengthChange: false,
                     paging: false,
+                    ordering: false,
                     buttons: [
                         {
                             extend: 'collection',

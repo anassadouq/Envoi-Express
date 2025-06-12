@@ -9,7 +9,7 @@ class DemandeController extends Controller
 {
     public function index()
     {
-        $demandes = Demande::all();
+        $demandes = Demande::orderBy('created_at', 'desc')->get();
         return view('demande.index', compact('demandes'));
     }
 
