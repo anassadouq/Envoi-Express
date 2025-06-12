@@ -173,7 +173,9 @@
                     <li><a href="/admin">Demande</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li class="nav-item">
-                        <a class="nav-link logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout </a>
+                        <a class="nav-link logout" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <span class="material-symbols-outlined">logout</span> 
+                        </a>
                     </li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
