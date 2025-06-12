@@ -307,26 +307,27 @@
                             <!-- Contact Form -->
                             <div class="contact-form fade-in">
                                 <h3>Envoyez-nous un message</h3>
-                                <form id="contact-form">
+                                <form method="POST" action="{{ route('contact.store') }}">
+                                    @csrf
                                     <div class="form-grid">
                                         <div class="form-group">
                                             <label for="nom">Nom complet *</label>
-                                            <input type="text" id="nom" name="nom" required placeholder="Mohamed Alami">
+                                            <input type="text" name="nom" required placeholder="Mohamed Alami">
                                         </div>
                                         <div class="form-group">
                                             <label for="telephone">Téléphone *</label>
-                                            <input type="tel" id="telephone" name="telephone" required placeholder="+212 6 12 34 56 78">
+                                            <input type="tel" name="tel" required placeholder="+212 6 12 34 56 78">
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="email">Email *</label>
-                                        <input type="email" id="email" name="email" required placeholder="mohamed.alami@email.com">
+                                        <input type="email" name="email" required placeholder="mohamed.alami@email.com">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="sujet">Sujet</label>
-                                        <select id="sujet" name="sujet">
+                                        <label for="sujet">Sujet *</label>
+                                        <select name="sujet">
                                             <option value="">Choisissez un sujet</option>
                                             <option value="question-generale">Question générale</option>
                                             <option value="probleme-livraison">Problème de livraison</option>
@@ -338,8 +339,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="message">Message *</label>
-                                        <textarea id="message" name="message" required placeholder="Décrivez votre demande en détail..."></textarea>
+                                        <label for="message">Message </label>
+                                        <textarea name="message" placeholder="Décrivez votre demande en détail..."></textarea>
                                     </div>
 
                                     <button type="submit" class="submit-button">Envoyer le message</button>

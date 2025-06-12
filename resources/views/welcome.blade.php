@@ -52,7 +52,7 @@
                         <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
                         <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
                             
-                        <form method="POST" action="{{ route('contact.store') }}">
+                        <form method="POST" action="{{ route('demande.store') }}">
                             @csrf
                             <div class="form-grid">
                                 <div class="form-group">

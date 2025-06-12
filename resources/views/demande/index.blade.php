@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Contact</title>
+        <title>Demande</title>
         <!-- CSS -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <!-- DataTables CSS -->
@@ -190,24 +190,28 @@
                     <tr>
                         <th>Nom</th>
                         <th>Email</th>
-                        <th>Téléphone</th>
-                        <th>Sujet</th>
-                        <th>Message</th>
+                        <th>Tel</th>
+                        <th>Ville de départ</th>
+                        <th>Ville d'arrivée</th>
+                        <th>Poids</th>
+                        <th>Detail</th>
                         <th>Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($contacts as $contact)
+                    @foreach ($demandes as $demande)
                         <tr>
-                            <td style="width: 10%">{{ $contact->prenom }} {{ $contact->nom }}</td>
-                            <td style="width: 10%">{{ $contact->email }}</td>
-                            <td style="width: 5%">{{ $contact->tel }}</td>
-                            <td style="width: 10%">{{ $contact->sujet }}</td>
-                            <td style="width: 20%">{{ $contact->message }}</td>
-                            <td style="width: 12%">{{ \Carbon\Carbon::parse($contact->created_at)->format('d/m/Y \à H:i') }}</td>
-                            <td style="width: 5%">
-                                <form action="{{ route('contact.destroy', $contact->id) }}" method="POST" id="deleteForm{{ $contact->id }}">
+                            <td style="width: 10%">{{ $demande->prenom }} {{ $demande->nom }}</td>
+                            <td style="width: 10%">{{ $demande->email }}</td>
+                            <td style="width: 5%">{{ $demande->tel }}</td>
+                            <td style="width: 8%">{{ $demande->ville_depart }}</td>
+                            <td style="width: 8%">{{ $demande->ville_arrivee }}</td>
+                            <td style="width: 5%">{{ $demande->poids }} Kg</td>
+                            <td style="width: 20%">{{ $demande->detail }}</td>
+                            <td>{{ \Carbon\Carbon::parse($demande->created_at)->format('d/m/Y \à H:i') }}</td>
+                            <td>
+                                <form action="{{ route('demande.destroy', $demande->id) }}" method="POST" id="deleteForm{{ $demande->id }}">
                                     @csrf
                                     @method('DELETE')
                                     <ul class="navbar-nav ms-auto">
@@ -218,7 +222,7 @@
                                                 </svg>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                <button type="button" onclick="confirmDelete('{{ $contact->id }}')" class="btn">
+                                                <button type="button" onclick="confirmDelete('{{ $demande->id }}')" class="btn">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                                                         <path fill-rule="evenodd" d="M10.354 8l3.823-3.823a.5.5 0 0 0-.708-.708L9.646 7.293 5.823 3.469a.5.5 0 0 0-.708.708L8.293 8l-3.82 3.823a.5.5 0 1 0 .708.708L9.647 8.707l3.824 3.824a.5.5 0 0 0 .708-.708L10.354 8z"/>
                                                     </svg>
@@ -235,7 +239,6 @@
             </table>
         </div>
 
-        
         <script>
             /* Burger menu */
             document.addEventListener("DOMContentLoaded", function() {
@@ -279,15 +282,15 @@
                             buttons: [
                                 {
                                     extend: 'excelHtml5',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
+                                    exportOptions: { columns: [0,1,2,3,4,5,6,7] }
                                 },
                                 {
                                     extend: 'pdfHtml5',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
+                                    exportOptions: { columns: [0,1,2,3,4,5,6,7] }
                                 },
                                 {
                                     extend: 'print',
-                                    exportOptions: { columns: [0,1,2,3,4,5] }
+                                    exportOptions: { columns: [0,1,2,3,4,5,6,7] }
                                 }
                             ]
                         }

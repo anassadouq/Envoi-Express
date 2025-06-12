@@ -74,17 +74,20 @@
                         <li><a href="#service">Sécurité Maximale</a></li>
                         <li><a href="#service">Service Rapide</a></li>
                         <li><a href="#service">Sur Mesure</a></li>
+                        <li><a href="#service">Emballage Renforcé</a></li>
+                        <li><a href="#service">Emballage Meuble</a></li>
+                        <li><a href="#service">Emballage Premium</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h5>Informations</h5>
                     <ul>
-                        <li><a href="/">Acceuil</a></li>
+                        <li><a href="/qui_sommes_nous">Qui sommes-nous ?</a></li>
+                        <li><a href="/">Déménagement</a></li>
                         <li><a href="#pourquoi">Pourquoi nous</a></li>
-                        <li><a href="#service">Service</a></li>
-                        <li><a href="#procedure">Procedure</a></li>
-                        <li><a href="#contactez-nous">Contact</a></li>
+                        <li><a href="/comment_ca_mache">Comment ça marche</a></li>
+                        <li><a href="/nous_contacter">Nous contacter</a></li>
                     </ul>
                 </div>
 

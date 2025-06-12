@@ -22,16 +22,14 @@ class ContactController extends Controller
     {
         $validated = $request->validate([
             'nom' => 'required|string|max:255',
-            'email' => 'required|email',
             'tel' => 'required|string|max:20',
-            'ville_depart' => 'required|string|max:255',
-            'ville_arrivee' => 'required|string',
-            'poids' => 'required|string',
-            'detail' => 'nullable|string',
+            'email' => 'required|email',
+            'sujet' => 'required|string',
+            'message' => 'nullable|string',
         ]);
 
         Contact::create($validated);
-        return to_route('welcome')->with('success', 'Votre demande a été envoyé avec succès.');
+        return to_route('welcome')->with('success', 'Votre contact a été envoyé avec succès.');
     }
 
     public function destroy(Contact $contact)
