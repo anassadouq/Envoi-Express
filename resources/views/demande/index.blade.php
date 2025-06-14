@@ -209,7 +209,7 @@
                         <tr>
                             <td style="width: 10%">{{ $demande->prenom }} {{ $demande->nom }}</td>
                             <td style="width: 10%">{{ $demande->email }}</td>
-                            <td style="width: 5%">{{ $demande->tel }}</td>
+                            <td style="width: 10%">{{ $demande->tel }}</td>
                             <td style="width: 8%">{{ $demande->ville_depart }}</td>
                             <td style="width: 8%">{{ $demande->ville_arrivee }}</td>
                             <td style="width: 5%">{{ $demande->poids }} Kg</td>

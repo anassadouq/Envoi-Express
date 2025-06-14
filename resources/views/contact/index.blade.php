@@ -208,7 +208,7 @@
                         <tr>
                             <td style="width: 10%">{{ $contact->prenom }} {{ $contact->nom }}</td>
                             <td style="width: 10%">{{ $contact->email }}</td>
-                            <td style="width: 5%">{{ $contact->tel }}</td>
+                            <td style="width: 10%">{{ $contact->tel }}</td>
                             <td style="width: 10%">{{ $contact->sujet }}</td>
                             <td style="width: 20%">{{ $contact->message }}</td>
                             <td style="width: 12%">{{ \Carbon\Carbon::parse($contact->created_at)->format('d/m/Y \à H:i') }}</td>
