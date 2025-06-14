@@ -13,6 +13,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
         <style>
+            body {
+                background-color: #F8F8F8;
+            }
+
             table {
                 border-collapse: collapse;
                 width: 100%;

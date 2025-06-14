@@ -14,6 +14,7 @@
 
         <body>
 
+
             @if (session('success'))
                 <div class="alert alert-success">
                     {{ session('success') }}
@@ -22,25 +23,19 @@
 
             <!-- Hero Section -->
             <section class="hero">
-                <div class="container">
+                <div class="hero-container">
                     <div class="hero-content">
-                        <div class="hero-text">
-                            <h1>Simple et moins cher.<br>La livraison qu'il vous faut.</h1>
-                            <p>Envoyez (presque) tout, partout au Maroc grâce à des trajets déjà prévus. C'est pratique et bon pour la planète. Bienvenue sur Envoi Express !</p>
-                        </div>
+                        <h1>Simple et moins cher. <span class="highlight">La livraison</span> qu'il vous faut</h1>
+                        <p>Envoyez (presque) tout, partout au Maroc grâce à des trajets déjà prévus. C'est pratique et bon pour la planète. Bienvenue sur Envoi Express !</p>
                         
-                        <div class="hero-illustration">
-                            <!-- Delivery illustration -->
-                            <div style="width: 400px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 20px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-                                <div style="text-align: center; color: #fff;">
-                                    <div style="font-size: 4rem; margin-bottom: 1rem;">
-                                        <i class="fas fa-truck-fast"></i>
-                                    </div>
-                                    <h3 style="margin-bottom: 0.5rem;">Livraison Rapide</h3>
-                                    <p style="opacity: 0.8;">Partout au Maroc</p>
-                                </div>
-                            </div>
+                        <div class="cta-buttons">
+                            <a href="/" class="btn btn-primary">Commencer</a>
+                            <a href="/" class="btn btn-secondary">En savoir plus</a>
                         </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <img src="images/h.png">
                     </div>
                 </div>
             </section>

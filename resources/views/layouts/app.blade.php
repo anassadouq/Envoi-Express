@@ -168,7 +168,6 @@
                             <a href="/demenagement_etudiant">Déménagement Étudiant</a>
                         </div>
                     </li>                    
-                    <li><a href="#pourquoi">Pourquoi nous</a></li>
                     <li><a href="/comment_ca_marche">Comment ça marche</a></li>
                     <li><a href="/nous_contacter">Nous contacter</a></li>
                 </ul>

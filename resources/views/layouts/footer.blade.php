@@ -7,6 +7,10 @@
     
     <style>
         /* Footer */
+        h5 {
+            font-size: 17px;
+            color: #2E4BC6;
+        }
         footer {
             background: #333;
             color: white;
@@ -54,6 +58,18 @@
             text-decoration: none;
             color: white;
         }
+
+        .social-link {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #D3D3D3;
+            color: black;
+        }
     </style>
 
     <footer class="footer">
@@ -65,29 +81,58 @@
                             <img src="images/logo.png" alt="" width="70px">
                         </a>
                     </div>
-                    <p><br>Simple et moins cher. <br>La livraison qu'il vous faut.</p>
+                    <ul>
+                        <li><a href="/qui_sommes_nous">Qui sommes-nous ?</a></li>
+                        <li class="dropdown">
+                            <a href="#demenagement">Déménagement</a>
+                            <div class="dropdown-content">
+                                <a href="/demenagement_particulier">Déménagement Particulier</a>
+                                <a href="/demenagement_entreprise">Déménagement Entreprise</a>
+                                <a href="/demenagement_etudiant">Déménagement Étudiant</a>
+                            </div>
+                        </li> 
+                        <li><a href="/comment_ca_marche">Comment ça marche</a></li>
+                        <li><a href="/nous_contacter">Nous contacter</a></li>
+                    </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h5>Services</h5>
+                    <h5>Conseils pratiques</h5>
                     <ul>
-                        <li><a href="#service">Sécurité Maximale</a></li>
-                        <li><a href="#service">Service Rapide</a></li>
-                        <li><a href="#service">Sur Mesure</a></li>
-                        <li><a href="#service">Emballage Renforcé</a></li>
-                        <li><a href="#service">Emballage Meuble</a></li>
-                        <li><a href="#service">Emballage Premium</a></li>
+                        <li><a href="#">Assurance</a></li>
+                        <li><a href="#">Envoi express et la sécurité</a></li>
+                        <li><a href="#">Conseils d'emballage</a></li>
+                    </ul>
+                    <h5>Nous suivre</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5>Catégories d'objets</h5>
+                    <ul>
+                        <li><a href="#">Transport meubles</a></li>
+                        <li><a href="#">Transport électroménager</a></li>
+                        <li><a href="#">Transport matériel high-tech</a></li>
+                        <li><a href="#">Transport véhicules</a></li>
+                        <li><a href="#">Transport matériel de bricolage</a></li>
+                        <li><a href="#">Livraison de colis</a></li>
+                        <li><a href="#">Transport de marchandises</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h5>Informations</h5>
+                    <h5>Objets les plus envoyés</h5>
                     <ul>
-                        <li><a href="/qui_sommes_nous">Qui sommes-nous ?</a></li>
-                        <li><a href="/">Déménagement</a></li>
-                        <li><a href="#pourquoi">Pourquoi nous</a></li>
-                        <li><a href="/comment_ca_mache">Comment ça marche</a></li>
-                        <li><a href="/nous_contacter">Nous contacter</a></li>
+                        <li><a href="#">Livraison vélo</a></li>
+                        <li><a href="#">Livraison buffet</a></li>
+                        <li><a href="#">Livraison pièces auto</a></li>
+                        <li><a href="#">Transport lave-vaisselle</a></li>
+                        <li><a href="#">Transport lave-linge</a></li>
+                        <li><a href="#">Livraison canapé</a></li>
                     </ul>
                 </div>
 
