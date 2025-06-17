@@ -138,6 +138,23 @@ nav {
     .burger {
         display: flex;
     }
+
+    .dropdown-content {
+        display: none;
+        position: relative;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+
+    .dropdown-content.show-dropdown {
+        display: block;
+    }
+
+    .dropdown > a::after {
+        content: " ▼";
+        font-size: 0.7rem;
+        margin-left: 0.5rem;
+    }
 }
 
 

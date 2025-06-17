@@ -161,13 +161,13 @@
                 <ul class="nav-links" id="nav-links">
                     <li><a href="/qui_sommes_nous">Qui sommes-nous ?</a></li>
                     <li class="dropdown">
-                        <a href="#demenagement">Déménagement</a>
+                        <a href="#demenagement" class="dropdown-toggle">Déménagement</a>
                         <div class="dropdown-content">
                             <a href="/demenagement_particulier">Déménagement Particulier</a>
                             <a href="/demenagement_entreprise">Déménagement Entreprise</a>
                             <a href="/demenagement_etudiant">Déménagement Étudiant</a>
                         </div>
-                    </li>                    
+                    </li>
                     <li><a href="/comment_ca_marche">Comment ça marche</a></li>
                     <li><a href="/nous_contacter">Nous contacter</a></li>
                 </ul>

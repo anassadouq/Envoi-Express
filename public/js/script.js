@@ -1,9 +1,19 @@
+// Burger navbar
 const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
 
-burger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Gestion du dropdown mobile
+    document.querySelectorAll('.dropdown-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdown = toggle.nextElementSibling;
+            dropdown.classList.toggle('show-dropdown');
+        });
+    });
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
