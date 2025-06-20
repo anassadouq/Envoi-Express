@@ -60,3 +60,13 @@ document.querySelectorAll('.feature-card, .packaging-card').forEach(card => {
         this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
     });
 });
+
+// Alert
+setTimeout(() => {
+  const alert = document.querySelector('.custom-alert');
+  if (alert) {
+      alert.style.transition = 'opacity 0.5s ease';
+      alert.style.opacity = '0';
+      setTimeout(() => alert.remove(), 500);
+  }
+}, 4000);
