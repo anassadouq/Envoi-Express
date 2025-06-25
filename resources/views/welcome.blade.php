@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="hero-image">
-                        <img src="images/h.png">
+                        <img src="images/hero.jpg">
                     </div>
                 </div>
             </section>
