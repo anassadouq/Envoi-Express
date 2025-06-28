@@ -141,13 +141,13 @@
                     <div class="contact-details">
                         <ul>
                             <li>
-                                <span class="contact-icon"><i class="fas fa-phone"></i> +212 5 22 12 34 56</span>
+                                <span class="contact-icon"><i class="fas fa-phone"></i> +212 661 334 939</span>
                             </li>
                             <li>
-                                <span class="contact-icon"><i class="fas fa-envelope"></i> contact@envoiexpress.ma</span>
+                                <span class="contact-icon"><i class="fas fa-envelope"></i> contact@envoi-express.ma</span>
                             </li>
                             <li>
-                                <span class="contact-icon"><i class="fas fa-map-marker-alt"></i> Avenue Mohammed V<br>Casablanca 20250, Maroc</span>
+                                <span class="contact-icon"><i class="fas fa-map-marker-alt"></i> Oqba Ibn Naafi, Rabat 10090, 1er étage Appartement 02, 46 Av</span>
                             </li>
                         </ul>
                     </div>

@@ -54,27 +54,27 @@
                             <div class="form-grid">
                                 <div class="form-group">
                                     <label for="nom">Nom et Prénom</label>
-                                    <input type="text" name="nom" placeholder="Mohamed Alami" required>
+                                    <input type="text" name="nom" placeholder="Veuillez entrer votre nom et prénom" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" placeholder="mohamed.alami@email.com" required>
+                                    <input type="email" name="email" placeholder="exemple@gmail.com" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="telephone">Téléphone</label>
-                                    <input type="tel" name="tel" placeholder="+212 6 12 34 56 78" required>
+                                    <input type="tel" name="tel" placeholder="+212 111 111 111" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="ville-depart">Ville de départ</label>
-                                    <input type="text" name="ville_depart" placeholder="Casablanca" required>
+                                    <input type="text" name="ville_depart" placeholder="Veuillez entrer la ville de départ" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="ville-arrivee">Ville d'arrivée</label>
-                                    <input type="text" name="ville_arrivee" placeholder="Rabat" required>
+                                    <input type="text" name="ville_arrivee" placeholder="Veuillez entrer la ville d'arrivée" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="poids">Poids approximatif</label>
-                                    <input type="text" name="poids" placeholder="5 kg" required>
+                                    <input type="text" name="poids" placeholder="Veuillez entrer le poids" required>
                                 </div>
                                 <div class="form-group full-width">
                                     <label for="details">Détails de l'envoi</label>

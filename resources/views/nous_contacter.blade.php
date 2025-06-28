@@ -312,17 +312,17 @@
                                     <div class="form-grid">
                                         <div class="form-group">
                                             <label for="nom">Nom complet *</label>
-                                            <input type="text" name="nom" required placeholder="Mohamed Alami">
+                                            <input type="text" name="nom" required placeholder="Veuillez entrer le nom">
                                         </div>
                                         <div class="form-group">
                                             <label for="telephone">Téléphone *</label>
-                                            <input type="tel" name="tel" required placeholder="+212 6 12 34 56 78">
+                                            <input type="tel" name="tel" required placeholder="+212 111 111 111">
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label for="email">Email *</label>
-                                        <input type="email" name="email" required placeholder="mohamed.alami@email.com">
+                                        <input type="email" name="email" required placeholder="exemple@gmail.com">
                                     </div>
 
                                     <div class="form-group">
@@ -355,7 +355,7 @@
                                     <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
                                     <div class="contact-item-content">
                                         <h4>Adresse</h4>
-                                        <p>123 Avenue Mohammed V<br>Casablanca 20250, Maroc</p>
+                                        <p>Oqba Ibn Naafi, Rabat 10090, 1er étage Appartement 02, 46 Av</p>
                                     </div>
                                 </div>
 
@@ -363,7 +363,7 @@
                                     <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
                                     <div class="contact-item-content">
                                         <h4>Téléphone</h4>
-                                        <p>+212 5 22 12 34 56<br>Lun-Ven : 8h-18h</p>
+                                        <p>+212 661 334 939<br>Lun-Ven : 8h-18h</p>
                                     </div>
                                 </div>
 
@@ -371,7 +371,7 @@
                                     <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
                                     <div class="contact-item-content">
                                         <h4>Email</h4>
-                                        <p>contact@envoiexpress.ma<br>Réponse sous 24h</p>
+                                        <p>contact@envoi-express.ma<br>Réponse sous 24h</p>
                                     </div>
                                 </div>
 
@@ -392,15 +392,10 @@
                 <section class="map-section">
                     <div class="container">
                         <h2 class="section-title">Notre localisation</h2>
-                        <p class="section-subtitle">Venez nous rendre visite dans nos bureaux au cœur de Casablanca</p>
+                        <p class="section-subtitle">Venez nous rendre visite dans nos bureaux au cœur de Rabat</p>
                         
                         <div class="map-container fade-in">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.4567!2d-7.6175!3d33.5731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1635959823456!5m2!1sen!2sus"
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3087.9121864979643!2d-6.851446124285621!3d34.00397567317513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76d994a805295%3A0x67d4d63b79529d8d!2sEnvoi%20Express%20Soci%C3%A9t%C3%A9%20de%20Transport%20et%20D%C3%A9m%C3%A9nagement%20%C3%A0%20Rabat!5e1!3m2!1sen!2sma!4v1751112680136!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </section>
