@@ -3,11 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeController;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-
+Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
 Route::get('/qui_sommes_nous', function () {
     return view('qui_sommes_nous');
 });

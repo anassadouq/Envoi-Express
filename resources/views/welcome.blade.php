@@ -53,33 +53,40 @@
                             @csrf
                             <div class="form-grid">
                                 <div class="form-group">
-                                    <label for="nom">Nom et Prénom</label>
+                                    <label for="nom">Nom et Prénom : *</label>
                                     <input type="text" name="nom" placeholder="Veuillez entrer votre nom et prénom" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email">Email : *</label>
                                     <input type="email" name="email" placeholder="exemple@gmail.com" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="telephone">Téléphone</label>
+                                    <label for="telephone">Téléphone : *</label>
                                     <input type="tel" name="tel" placeholder="+212 111 111 111" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="ville-depart">Ville de départ</label>
+                                    <label for="ville-depart">Ville de départ : *</label>
                                     <input type="text" name="ville_depart" placeholder="Veuillez entrer la ville de départ" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="ville-arrivee">Ville d'arrivée</label>
+                                    <label for="ville-arrivee">Ville d'arrivée : *</label>
                                     <input type="text" name="ville_arrivee" placeholder="Veuillez entrer la ville d'arrivée" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="poids">Poids approximatif</label>
+                                    <label for="poids">Poids approximatif : *</label>
                                     <input type="text" name="poids" placeholder="Veuillez entrer le poids" required>
                                 </div>
                                 <div class="form-group full-width">
                                     <label for="details">Détails de l'envoi</label>
                                     <textarea name="detail" rows="4" style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical; font-family: inherit;" placeholder="Décrivez votre colis (dimensions, nature de l'objet, instructions spéciales, etc.)"></textarea>
                                 </div>
+
+                                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span style="color: red; font-size: 0.9rem;">{{ $errors->first('g-recaptcha-response') }}</span>
+                                @endif
+
                                 <div class="form-group full-width" style="text-align: center;">
                                     <button class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">Envoyer la demande</button>
                                 </div>
@@ -174,29 +181,32 @@
             <section class="reviews">
                 <div class="container">
                     <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">Avis clients Google</h2>
-                    <p style="text-align: center; opacity: 0.9; font-size: 1.1rem;">Nos avis vérifiés Google Business Profile - La confiance de nos clients, notre meilleure garantie</p>
+                    <p style="text-align: center; opacity: 0.9; font-size: 1.1rem;">
+                        Nos avis vérifiés Google Business Profile - La confiance de nos clients, notre meilleure garantie
+                    </p>
+
                     <div class="reviews-grid">
-                        <div class="review-card">
-                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                            <div class="review-text">"Au top ! Première expérience sur ce site. Besoin d'un transport d'un gros meuble situé à 800km de chez moi. Vite contacté, transporteur au top, transaction sécurisée. Je recommande ce site sans problème."</div>
-                            <div class="review-author">- Alexandra</div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-rating">⭐⭐⭐⭐</div>
-                            <div class="review-text">"Prix imbattable ! Super service à un prix imbattable. Les avis laissés aux conducteurs permettent d'avoir une totale confiance, et à raison. Je recommande Envoi Express à fond !"</div>
-                            <div class="review-author">- Caroline M.</div>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                            <div class="review-text">"Sûr et efficace ! Je ne connaissais pas ce site il y a encore 1 mois. Et depuis, je l'ai utilisé 2 fois. Sans soucis. Tout s'est très bien passé. Très bon rapport service/prix."</div>
-                            <div class="review-author">- Nathalie F.</div>
-                        </div>
+                        @forelse($reviews as $review)
+                            <div class="review-card">
+                                <div class="review-rating">
+                                    {{ str_repeat('⭐', round($review['rating'])) }}
+                                </div>
+                                <div class="review-text">
+                                    "{{ $review['text'] }}"
+                                </div>
+                                <div class="review-author">
+                                    - {{ $review['author_name'] }}
+                                </div>
+                            </div>
+                        @empty
+                            <p style="text-align:center;">Aucun avis disponible pour le moment.</p>
+                        @endforelse
                     </div>
 
                     <div style="text-align: center; margin-top: 3rem;">
-                        <a href="https://www.google.com/search?q=Envoi+Express+Casablanca&hl=fr#lrd=0x" 
-                        target="_blank" 
-                        style="display: inline-flex; align-items: center; background: white; color: #333; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s;">
+                        <a href="https://www.google.com/maps/place/?q=place_id:ChIJlVKASpltpw0RjZ1SeTvW1Gc" 
+                            target="_blank" 
+                            style="display: inline-flex; align-items: center; background: white; color: #333; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: transform 0.3s;">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath fill='%234285f4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/%3E%3Cpath fill='%2334a853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z'/%3E%3Cpath fill='%23fbbc05' d='M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z'/%3E%3Cpath fill='%23ea4335' d='M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z'/%3E%3C/svg%3E" 
                                 style="margin-right: 8px;" alt="Google">
                             Voir tous nos avis Google
@@ -204,6 +214,7 @@
                     </div>
                 </div>
             </section>
+
 
             <!-- Packaging Section -->
             <section class="packaging" id="service">
@@ -397,6 +408,9 @@
             </section>
 
             <script src="{{ asset('js/script.js') }}"></script>
+
+            <!-- recaptcha -->
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
             <!-- google analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-DHJG32NEZ3"></script>

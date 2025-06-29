@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Demande;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class DemandeController extends Controller
 {
@@ -20,7 +21,7 @@ class DemandeController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'nom' => 'required|string|max:255',
             'email' => 'required|email',
             'tel' => 'required|string|max:20',
@@ -28,10 +29,23 @@ class DemandeController extends Controller
             'ville_arrivee' => 'required|string',
             'poids' => 'required|string',
             'detail' => 'nullable|string',
+            'g-recaptcha-response' => 'required',
         ]);
 
-        Demande::create($validated);
-        return to_route('welcome')->with('success', 'Votre demande a été envoyé avec succès.');
+        // ✅ Verify reCAPTCHA with Google
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_SECRET_KEY'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip(),
+        ]);
+
+        if (!$response->json('success')) {
+            return back()->withErrors(['captcha' => 'La vérification reCAPTCHA a échoué.'])->withInput();
+        }
+
+        Demande::create($request->except('g-recaptcha-response'));
+
+        return to_route('welcome')->with('success', 'Votre demande a été envoyée avec succès.');
     }
 
     public function destroy(Demande $demande)

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class ContactController extends Controller
 {
@@ -26,9 +27,21 @@ class ContactController extends Controller
             'email' => 'required|email',
             'sujet' => 'required|string',
             'message' => 'nullable|string',
+            'g-recaptcha-response' => 'required',
         ]);
 
-        Contact::create($validated);
+        // ✅ Verify reCAPTCHA with Google
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_SECRET_KEY'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip(),
+        ]);
+
+        if (!$response->json('success')) {
+            return back()->withErrors(['captcha' => 'La vérification reCAPTCHA a échoué.'])->withInput();
+        }
+
+        Contact::create($request->except('g-recaptcha-response'));
         return to_route('welcome')->with('success', 'Votre contact a été envoyé avec succès.');
     }
 

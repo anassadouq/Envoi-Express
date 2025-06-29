@@ -343,6 +343,12 @@
                                         <textarea name="message" placeholder="Décrivez votre demande en détail..."></textarea>
                                     </div>
 
+                                    <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITE_KEY') }}"></div>
+
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span style="color: red; font-size: 0.9rem;">{{ $errors->first('g-recaptcha-response') }}</span>
+                                    @endif
+
                                     <button type="submit" class="submit-button">Envoyer le message</button>
                                 </form>
                             </div>
@@ -401,5 +407,8 @@
                 </section>
             </main>
         </body>
+        
+        <!-- recaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </html>
 @endsection
