@@ -112,27 +112,34 @@
                 </div>
 
                 <div class="footer-section">
-                    <h5>Catégories d'objets</h5>
+                    <h5>Objets les plus envoyés</h5>
                     <ul>
-                        <li><a href="#">Transport meubles</a></li>
-                        <li><a href="#">Transport électroménager</a></li>
-                        <li><a href="#">Transport matériel high-tech</a></li>
-                        <li><a href="#">Transport véhicules</a></li>
-                        <li><a href="#">Transport matériel de bricolage</a></li>
-                        <li><a href="#">Livraison de colis</a></li>
-                        <li><a href="#">Transport de marchandises</a></li>
+                        <li><a href="/transport_meubles">Transport meubles</a></li>
+                        <li><a href="/transport_electromenager">Transport électroménager</a></li>
+                        <li><a href="/materiel_high_tech">Transport matériel high-tech</a></li>
+                        <li><a href="/materiel_de_bricolage">Transport matériel de bricolage</a></li>
+                        <li><a href="/transport_de_marchandises">Transport de marchandises</a></li>
+                        <li><a href="/transport_lave_vaisselle">Transport lave-vaisselle</a></li>
+                        <li><a href="/transport_lave_linge">Transport lave-linge</a></li>
+                        <li><a href="/livraison_de_colis">Livraison de colis</a></li>
+                        <li><a href="/livraison_velo">Livraison vélo</a></li>
+                        <li><a href="/livraison_buffet">Livraison buffet</a></li>
+                        <li><a href="/livraison_pièces_auto">Livraison pièces auto</a></li>
+                        <li><a href="/livraison_canape">Livraison canapé</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h5>Objets les plus envoyés</h5>
+                    <h5>Trouvez votre déménageur</h5>
                     <ul>
-                        <li><a href="#">Livraison vélo</a></li>
-                        <li><a href="#">Livraison buffet</a></li>
-                        <li><a href="#">Livraison pièces auto</a></li>
-                        <li><a href="#">Transport lave-vaisselle</a></li>
-                        <li><a href="#">Transport lave-linge</a></li>
-                        <li><a href="#">Livraison canapé</a></li>
+                        <li><a href="/Déménagement_Rabat">Déménagement Rabat</a></li>
+                        <li><a href="/Déménagement_Tanger">Déménagement Tanger</a></li>
+                        <li><a href="/Déménagement_Marrakech">Déménagement Marrakech</a></li>
+                        <li><a href="/Déménagement_Casablanca">Déménagement Casablanca</a></li>
+                        <li><a href="/Déménagement_Agadir">Déménagement Agadir</a></li>
+                        <li><a href="/Déménagement_Essaouira">Déménagement Essaouira</a></li>
+                        <li><a href="/Déménagement_Nador">Déménagement Nador</a></li>
+                        <li><a href="/Déménagement_Laayoune">Déménagement Laâyoune</a></li>
                     </ul>
                 </div>
 

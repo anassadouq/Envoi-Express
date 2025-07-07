@@ -40,7 +40,7 @@
                 }
 
                 .heroo h1 {
-                    font-size: 3.5rem;
+                    font-size: 2.7rem;
                     margin-bottom: 1.5rem;
                     font-weight: 700;
                 }
@@ -308,7 +308,7 @@
                     <div class="cta-content">
                         <h2>Obtenez votre devis gratuit</h2>
                         <p>Contactez-nous dès aujourd’hui et obtenez une estimation personnalisée pour votre déménagement particulier.</p>
-                        <a href="/" class="cta-button">Demander un devis</a>
+                        <a href="/#contactez-nous" class="cta-button">Demander un devis</a>
                     </div>
                 </div>
             </section>

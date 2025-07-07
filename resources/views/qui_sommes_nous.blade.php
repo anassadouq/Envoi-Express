@@ -392,11 +392,27 @@
                         <h2 class="section-title">Notre Histoire</h2>
                         <div class="story-grid">
                             <div class="story-text">
-                                <h3>Une vision, une mission</h3>
-                                <p>Envoi Express est né en 2020 d'un constat simple : pourquoi créer de nouveaux trajets quand des milliers de voyageurs et transporteurs parcourent déjà le Maroc chaque jour ?</p>
-                                <p>Notre fondateur, inspiré par les défis logistiques du pays, a imaginé une plateforme qui connecte ceux qui ont besoin d'envoyer des colis avec ceux qui voyagent déjà sur le même itinéraire.</p>
-                                <p>Aujourd'hui, nous sommes fiers d'être la première plateforme de transport collaboratif au Maroc, avec plus de 435 000 utilisateurs satisfaits.</p>
+                                <h3>À propos de nous</h3>
+                                <p>Envoi Express est une entreprise spécialisée dans le transport, le déménagement et la logistique sur mesure. Depuis notre création, nous mettons tout en œuvre pour offrir à nos clients un service rapide, fiable et professionnel.
+                                    <br>Basés à toutes les régions du Maroc, nous accompagnons aussi bien les particuliers que les professionnels dans tous leurs besoins de déplacement de biens :
+                                </p>
+
+                                <ul style="list-style: none; padding-left: 0;">
+                                    <li><i class="fas fa-box" style="color:#2E4BC6; margin-right: 8px;"></i> Déménagement résidentiel ou commercial</li>
+                                    <li><i class="fas fa-truck-moving" style="color:#2E4BC6; margin-right: 8px;"></i> Transport express ou planifié</li>
+                                    <li><i class="fas fa-warehouse" style="color:#2E4BC6; margin-right: 8px;"></i> Emballage, manutention et stockage sécurisé</li>
+                                    <li><i class="fas fa-tools" style="color:#2E4BC6; margin-right: 8px;"></i> Services personnalisés selon vos exigences</li>
+                                </ul>
+
+                                <p><strong>Nos engagements :</strong></p>
+                                <ul style="list-style: none; padding-left: 0;">
+                                    <li><i class="fas fa-clock" style="color:green; margin-right: 8px;"></i> Ponctualité et fiabilité</li>
+                                    <li><i class="fas fa-file-invoice-dollar" style="color:green; margin-right: 8px;"></i> Transparence et devis clairs</li>
+                                    <li><i class="fas fa-shield-alt" style="color:green; margin-right: 8px;"></i> Protection optimale de vos biens</li>
+                                    <li><i class="fas fa-smile" style="color:green; margin-right: 8px;"></i> Satisfaction client avant tout</li>
+                                </ul>
                             </div>
+
                             <div class="story-image">
                                 <div class="story-image-placeholder">
                                     <div class="icon"><i class="fas fa-truck-moving"></i></div>
@@ -463,38 +479,6 @@
                         </div>
                     </section>
 
-                    <!-- Notre Équipe -->
-                    <section class="content-section">
-                        <h2 class="section-title">Notre Équipe</h2>
-                        <p class="section-subtitle">Les talents passionnés qui font d'Envoi Express une réussite</p>
-                        
-                        <div class="team-grid">
-                            <div class="team-member fade-in">
-                                <div class="member-photo">YA</div>
-                                <div class="member-name">Youssef Alami</div>
-                                <div class="member-role">CEO & Fondateur</div>
-                                <div class="member-bio">Entrepreneur passionné par l'innovation logistique et le développement durable. 15 ans d'expérience dans le transport au Maroc.</div>
-                            </div>
-                            <div class="team-member fade-in">
-                                <div class="member-photo">SB</div>
-                                <div class="member-name">Sarah Benali</div>
-                                <div class="member-role">CTO</div>
-                                <div class="member-bio">Ingénieure en informatique spécialisée dans les plateformes collaboratives. Experte en intelligence artificielle et optimisation de trajets.</div>
-                            </div>
-                            <div class="team-member fade-in">
-                                <div class="member-photo">KM</div>
-                                <div class="member-name">Karim Moussaoui</div>
-                                <div class="member-role">Directeur Opérations</div>
-                                <div class="member-bio">Expert en logistique et supply chain avec 12 ans d'expérience. Responsable de l'optimisation de notre réseau de transporteurs.</div>
-                            </div>
-                            <div class="team-member fade-in">
-                                <div class="member-photo">LT</div>
-                                <div class="member-name">Laila Tazi</div>
-                                <div class="member-role">Directrice Marketing</div>
-                                <div class="member-bio">Spécialiste en marketing digital et communication. Passionnée par l'expérience client et l'innovation dans les services.</div>
-                            </div>
-                        </div>
-                    </section>
                 </div>
 
                 <!-- Stats Section -->
@@ -504,14 +488,6 @@
                         <p class="section-subtitle">Des résultats qui témoignent de notre engagement</p>
                         
                         <div class="stats-grid">
-                            <div class="stat-item">
-                                <span class="stat-number floating">435,000+</span>
-                                <div class="stat-label">Utilisateurs satisfaits</div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number floating">1.2M+</span>
-                                <div class="stat-label">Colis livrés</div>
-                            </div>
                             <div class="stat-item">
                                 <span class="stat-number floating">4.7/5</span>
                                 <div class="stat-label">Note moyenne</div>
@@ -534,7 +510,7 @@
                         <div class="cta-content">
                             <h2>Rejoignez la révolution du transport</h2>
                             <p>Découvrez comment Envoi Express peut simplifier vos envois tout en contribuant à un avenir plus durable.</p>
-                            <a href="/" class="cta-button">Commencer maintenant</a>
+                            <a href="/#contactez-nous" class="cta-button">Commencer maintenant</a>
                         </div>
                     </div>
                 </section>

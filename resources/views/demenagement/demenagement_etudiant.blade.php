@@ -39,7 +39,7 @@
                 }
 
                 .heroo h1 {
-                    font-size: 3.5rem;
+                    font-size: 2.7rem;
                     margin-bottom: 1.5rem;
                     font-weight: 700;
                 }
@@ -283,7 +283,7 @@
                     <div class="cta-content">
                         <h2>Obtenez votre devis gratuit</h2>
                         <p>Confiez votre projet de déménagement d’entreprise à des experts du transfert professionnel. Obtenez un devis personnalisé dès aujourd’hui.</p>
-                        <a href="/" class="cta-button">Demander un devis</a>
+                        <a href="/#contactez-nous" class="cta-button">Demander un devis</a>
                     </div>
                 </div>
             </section>

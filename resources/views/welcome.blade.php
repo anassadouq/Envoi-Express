@@ -41,9 +41,9 @@
             </section>
 
             <!-- Form Section -->
-            <section class="form-section" >
+            <section class="form-section" id="contactez-nous">
                 <div class="form-container">
-                    <div class="form-card" id="contactez-nous">
+                    <div class="form-card">
                         <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
                         <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
                             
@@ -154,7 +154,7 @@
             <section class="how-it-works">
                 <div class="container">
                     <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Comment ça marche ?</h2>
-                    <p style="text-align: center; color: #666; margin-bottom: 2rem;">Simple comme bonjour en 3 étapes</p>
+                    <p style="text-align: center; color: #666; margin-bottom: 2rem;">Nous transmettons votre demande à notre communauté : des voyageurs et des transporteurs dont le trajet coïncide avec votre livraison</p>
                     <div class="steps">
                         <div class="step fade-in">
                             <div class="step-number">1</div>
@@ -222,8 +222,8 @@
                         Chez Envoi Express, nous savons que la protection de vos colis est primordiale. C'est pourquoi nous proposons des solutions d'emballage adaptées à chaque type d'envoi, garantissant une livraison en parfait état.
                     </p>
                     
-                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 3rem; border-radius: 20px; margin-bottom: 3rem;">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                    <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 3rem; border-radius: 20px; margin-bottom: 3rem; overflow-x: auto;">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; min-width: 1000px;">
                             <div>
                                 <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #2E4BC6, #4A6CF7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: white;">
                                     <i class="fas fa-shield-alt"></i>
@@ -245,8 +245,17 @@
                                 <h3 style="color: #333; margin-bottom: 0.5rem;">Sur Mesure</h3>
                                 <p style="color: #666;">Solutions personnalisées selon vos besoins</p>
                             </div>
+                            <div>
+                                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #2E4BC6, #4A6CF7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; color: white;">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3 style="color: #333; margin-bottom: 0.5rem;">Démontage et Montage</h3>
+                                <p style="color: #666;">Service complet de démontage et remontage de vos meubles</p>
+                            </div>
                         </div>
                     </div>
+
+
 
                     <div class="packaging-grid">
                         <div class="packaging-card fade-in">
