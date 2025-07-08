@@ -212,7 +212,7 @@
                             <td style="width: 10%">{{ $demande->tel }}</td>
                             <td style="width: 8%">{{ $demande->ville_depart }}</td>
                             <td style="width: 8%">{{ $demande->ville_arrivee }}</td>
-                            <td style="width: 5%">{{ $demande->poids }} Kg</td>
+                            <td style="width: 8%">{{ $demande->poids }} Kg</td>
                             <td style="width: 20%">{{ $demande->detail }}</td>
                             <td>{{ \Carbon\Carbon::parse($demande->created_at)->format('d/m/Y \à H:i') }}</td>
                             <td>
