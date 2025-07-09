@@ -19,7 +19,8 @@ class ContactMessageMail extends Mailable
 
     public function build()
     {
-        return $this->subject('Nouveau message de contact')
-                    ->view('emails.contact');
+        return $this
+            ->subject('Message Contact ID #' . $this->data['id'])
+            ->view('emails.contact');
     }
 }

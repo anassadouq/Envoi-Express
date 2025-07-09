@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Demande;
 use Illuminate\Http\Request;
+use App\Mail\DemandeMessageMail;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class DemandeController extends Controller
 {
@@ -21,7 +23,8 @@ class DemandeController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        // ✅ Validate the form data
+        $validated = $request->validate([
             'nom' => 'required|string|max:255',
             'email' => 'required|email',
             'tel' => 'required|string|max:20',
@@ -39,12 +42,18 @@ class DemandeController extends Controller
             'remoteip' => $request->ip(),
         ]);
 
-        if (!$response->json('success')) {
-            return back()->withErrors(['captcha' => 'La vérification reCAPTCHA a échoué.'])->withInput();
+        if (!($response->json()['success'] ?? false)) {
+            return back()->withErrors(['g-recaptcha-response' => 'reCAPTCHA verification failed.'])->withInput();
         }
 
-        Demande::create($request->except('g-recaptcha-response'));
+        // ✅ Create the Demande
+        $demande = Demande::create($validated);
 
+        // ✅ Convert to array and send email
+        $data = $demande->toArray();
+        Mail::to('anassadouq123@gmail.com')->send(new DemandeMessageMail($data));
+
+        // ✅ Redirect with success message
         return to_route('welcome')->with('success', 'Votre demande a été envoyée avec succès.');
     }
 
