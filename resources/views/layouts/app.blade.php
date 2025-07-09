@@ -1,7 +1,20 @@
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Envoi Express Maroc - Livraison Rapide et Suivi de Colis</title>
+        <meta name="description" content="Service d'envoi express et livraison rapide partout au Maroc. Suivez vos colis en temps réel. Basé à Casablanca.">
+        <meta name="keywords" content="envoi express maroc, livraison rapide, suivi colis, envoi casablanca, transport colis maroc, service livraison maroc">
+        <meta name="author" content="Envoi Express Maroc">
+        <link rel="canonical" href="https://www.envoi-express.ma/" />
+        <!-- Open Graph for social media sharing -->
+        <meta property="og:title" content="Envoi Express Maroc - Livraison Rapide et Fiable" />
+        <meta property="og:description" content="Envoyez vos colis rapidement et en toute sécurité à travers le Maroc. Service de suivi en ligne." />
+        <meta property="og:url" content="https://www.envoi-express.ma/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.envoi-express.ma/assets/og-image.jpg" />
+        <!-- Favicon -->
+        <link rel="icon" href="/images/logo.png" type="image/png" />
         <title>Envoi Express - Transport de Colis entre Particuliers</title>
     </head>
 
