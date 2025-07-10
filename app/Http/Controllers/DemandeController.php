@@ -30,7 +30,7 @@ class DemandeController extends Controller
             'tel' => 'required|string|max:20',
             'ville_depart' => 'required|string|max:255',
             'ville_arrivee' => 'required|string',
-            'poids' => 'required|string',
+            'poids' => 'nullable|string',
             'detail' => 'nullable|string',
             'g-recaptcha-response' => 'required',
         ]);

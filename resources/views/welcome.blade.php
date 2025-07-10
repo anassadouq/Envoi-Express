@@ -44,8 +44,8 @@
             <section class="form-section" id="contactez-nous">
                 <div class="form-container">
                     <div class="form-card">
-                        <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander une livraison</h2>
-                        <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous et recevez des propositions de transporteurs</p>
+                        <h2 style="text-align: center; font-size: 2.5rem; color: #333; margin-bottom: 1rem;">Demander un Devis</h2>
+                        <p style="text-align: center; color: #666; margin-bottom: 3rem;">Remplissez le formulaire ci-dessous</p>
                             
                         <form method="POST" action="{{ route('demande.store') }}">
                             @csrf
@@ -71,8 +71,8 @@
                                     <input type="text" name="ville_arrivee" placeholder="Veuillez entrer la ville d'arrivée" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="poids">Poids approximatif : *</label>
-                                    <input type="text" name="poids" placeholder="Veuillez entrer le poids" required>
+                                    <label for="poids">Poids approximatif : </label>
+                                    <input type="text" name="poids" placeholder="Veuillez entrer le poids">
                                 </div>
                                 <div class="form-group full-width">
                                     <label for="details">Détails de l'envoi</label>
