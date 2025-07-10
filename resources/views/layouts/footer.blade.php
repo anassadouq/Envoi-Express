@@ -78,7 +78,7 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <a href="/">
-                            <img src="images/logo.png" alt="" width="70px">
+                            <img src="images/logo.png" alt="" width="70px" style="background-color: white; border-radius: 50%;">
                         </a>
                     </div>
                     <ul>
