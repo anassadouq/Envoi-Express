@@ -18,7 +18,7 @@ class DemandeController extends Controller
 
     public function create()
     {
-        return view('welcome');
+        return view('/');
     }
 
     public function store(Request $request)
@@ -54,7 +54,7 @@ class DemandeController extends Controller
         Mail::to('anassadouq123@gmail.com')->send(new DemandeMessageMail($data));
 
         // ✅ Redirect with success message
-        return to_route('welcome')->with('success', 'Votre demande a été envoyée avec succès.');
+        return redirect('/')->with('success', 'Votre demande a été envoyée avec succès.');
     }
 
     public function destroy(Demande $demande)
